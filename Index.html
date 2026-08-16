@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>@ChristianVan</title>
+  <meta name="description" content="[SHORT DESCRIPTION OF YOUR SITE]">
+
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #171a21;
+      --surface-hover: #1e222b;
+      --text: #f2f4f7;
+      --muted: #a8afb9;
+      --accent: #5aa9ff;
+      --border: #292e38;
+      --max-width: 1000px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: auto;
+    }
+
+    /* Top area */
+
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
+        url("https://raw.githubusercontent.com/ChristianVan391/ChristianVan391/refs/heads/main/DSC_2208.JPG");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: auto;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1.05;
+      margin: 0 0 20px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      margin: 0 0 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6px);
+    }
+
+    .button:hover {
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    /* Sections */
+
+    section {
+      padding: 70px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    /* Link cards */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      display: block;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      background: var(--surface-hover);
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* About */
+
+    .about {
+      max-width: 700px;
+    }
+
+    .about p {
+      color: var(--muted);
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 35px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        min-height: 480px;
+      }
+
+      .hero-content,
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <!-- TOP / HERO -->
+
+    <section class="hero">
+      <div class="hero-content">
+
+        <div class="eyebrow">@ChristianVan</div>
+
+        <h1>Hi!</h1>
+
+        <p>
+          welcome to my website where you can find stuff about me :).
+        </p>
+
+        <a class="button" href="#links">Find me online</a>
+
+      </div>
+    </section>
+
+
+    <!-- LINKS -->
+
+    <section id="links">
+      <div class="container">
+
+        <h2>Find me online</h2>
+
+        <p class="section-intro">
+          these are links to where you can find me.
+        </p>
+
+        <div class="grid">
+
+          <a class="card" href="#">
+            <h3>Something</h3>
+            <p>Some future site may go here</p>
+          </a>
+
+          <a class="card" href="https://www.youtube.com/@ChristianVanVlogs">
+            <h3>YouTube</h3>
+            <p>This is my main youtube channel</p>
+          </a>
+
+          <a class="card" href="https://github.com/ChristianVan391/">
+            <h3>Github</h3>
+            <p>Where I share projects I have made</p>
+          </a>
+
+          <a class="card" href="#">
+            <h3>Something</h3>
+            <p>Some future site may go here</p>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container">
+      Made this for fun :) · 2026
+    </div>
+  </footer>
+
+</body>
+</html>
